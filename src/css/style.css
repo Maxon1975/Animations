@@ -1,0 +1,220 @@
+
+body {
+  color: #520909d1;
+}
+.hidden {
+  display: none;
+}
+.container{
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  padding-top: 50px;
+  width: 500px;
+  margin: auto;
+}
+.collapser{
+  min-height: 200px;
+}
+
+.collapse__btn{
+  background-color: lightblue;
+  margin-bottom: 15px;
+}
+.collapse__content{
+  height: 1px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.collapse__content-active{
+  transition: 2s;
+  border: 1px solid lightblue;
+  padding: 20px;
+}
+
+.chat__btn{
+  position: absolute;
+  right: 30px;
+  bottom:  30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: red;
+
+}
+
+.chat__btn:hover{
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.chat__from{
+  position: absolute;
+  right: 30px;
+  bottom:  30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightblue;
+  width: 200px;
+  background-color: #fff;
+  animation-name: show;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  
+}
+
+.chat__form-close{
+  animation-name: hide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes hide{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+} 
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.chat__from > h2 {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.chat__input{
+  width: 180px;
+  height: 100px;
+  margin: auto;
+}
+
+.chat__send{
+  margin: 10px;
+  height: 20px;
+}
+
+.chat__close{
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.likes{
+  position: relative;
+}
+
+.like__Btn{
+  width: 150px;
+  background-color: red;
+  border-radius: 20px;
+  color: #fff;
+
+}
+
+.heart {
+  position: absolute;
+
+  height: 25px;
+  width: 25px;
+
+  background-image: url('../pic/heart.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+
+  transform: translate(-50%, -50%);
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+
+.heart-1 {
+  animation-name: heart-1;
+}
+
+.heart-2 {
+  animation-name: heart-2;
+}
+
+.heart-3 {
+  animation-name: heart-3;
+}
+
+.heart-4 {
+  animation-name: heart-4;
+}
+
+@keyframes heart-1 {
+  25% {
+    transform: translate(calc(-50% - 50px), -50px);
+  }
+  50% {
+    transform: translate(-50%, -100px);
+  }
+  75% {
+    transform: translate(calc(-50% + 50px), -150px);
+  }
+  100% {
+    transform: translate(-50%, -200px);
+    opacity: 0;
+  }
+}
+@keyframes heart-2 {
+  25% {
+    transform: translate(-50%, -50px);
+  }
+  50% {
+    transform: translate(calc(-50% + 50px), -100px);
+  }
+  75% {
+    transform: translate(calc(-50% - 50px), -150px);
+  }
+  100% {
+    transform: translate(-50%, -200px);
+    opacity: 0;
+  }
+}
+@keyframes heart-3 {
+  25% {
+    transform: translate(-50%, -50px);
+  }
+  50% {
+    transform: translate(calc(-50% - 50px), -100px);
+  }
+  75% {
+    transform: translate(calc(-50% + 50px), -150px);
+  }
+  100% {
+    transform: translate(-50%, -200px);
+    opacity: 0;
+  }
+}
+@keyframes heart-4 {
+  25% {
+    transform: translate(calc(-50% + 50px), -50px);
+  }
+  50% {
+    transform: translate(-50%, -100px);
+  }
+  75% {
+    transform: translate(calc(-50% - 50px), -150px);
+  }
+  100% {
+    transform: translate(-50%, -200px);
+    opacity: 0;
+  }
+}
